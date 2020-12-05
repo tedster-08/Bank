@@ -6,9 +6,13 @@ public class BankAccount {
     private double _currentBalance;
     private String _uuid;
 
-    public BankAccount() {
-        this._currentBalance = 0;
+    public BankAccount(double initialBalance) {
+        this._currentBalance = initialBalance;
         this._uuid = generateUUID();
+    }
+
+    public BankAccount() {
+        this(0);
     }
 
     public static String generateUUID() {
